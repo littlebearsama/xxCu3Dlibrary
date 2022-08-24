@@ -79,9 +79,6 @@ int main(int argc, char* argv[])
 	//1. cuicp
 	testCUDAICP();
 
-	std::cout << "INT_MAX" << INT_MAX << std::endl;
-	std::cout << "size of int:" << sizeof(int) << std::endl;
-	//compareAdcensus();
-	//testCuAdcensus();
-	std::cout << "functionEND" << std::endl << "getchar()" << std::endl;
+	std::cout << "functionEND" << std::endl;
+	getchar();
 }

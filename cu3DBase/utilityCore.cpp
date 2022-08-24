@@ -1,11 +1,3 @@
-/**
- * @file      utilityCore.cpp
- * @brief     UTILITYCORE: A collection/kitchen sink of generally useful functions
- * @authors   Yining Karl Li
- * @date      2012
- * @copyright Yining Karl Li
- */
-//一个通用功能集合
 
 #include <iostream>
 #include <cstdio>
@@ -65,7 +57,7 @@ bool utilityCore::epsilonCheck(float a, float b) {
         return false;
     }
 }
-//没用上
+
 glm::mat4 utilityCore::buildTransformationMatrix(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale) {
     glm::mat4 translationMat = glm::translate(glm::mat4(), translation);
     glm::mat4 rotationMat = glm::rotate(glm::mat4(), rotation.x, glm::vec3(1, 0, 0));
@@ -74,7 +66,7 @@ glm::mat4 utilityCore::buildTransformationMatrix(glm::vec3 translation, glm::vec
     glm::mat4 scaleMat = glm::scale(glm::mat4(), scale);
     return translationMat * rotationMat * scaleMat;
 }
-//用上了
+//1
 std::vector<std::string> utilityCore::tokenizeString(const std::string& str, char sep) {
     std::stringstream strstr(str);
     std::string segment;
@@ -134,8 +126,7 @@ std::string  utilityCore::getFilePathExtension(const std::string &FileName) {
 //-------GLM Printers----------
 //-----------------------------
 
-//打印4X4矩阵
-//glm::mat4可以通过下标运算符索引
+
 void utilityCore::printMat4(const glm::mat4 &m) {
     std::cout << m[0][0] << " " << m[1][0] << " " << m[2][0] << " " << m[3][0] << std::endl;
     std::cout << m[0][1] << " " << m[1][1] << " " << m[2][1] << " " << m[3][1] << std::endl;
@@ -143,12 +134,9 @@ void utilityCore::printMat4(const glm::mat4 &m) {
     std::cout << m[0][3] << " " << m[1][3] << " " << m[2][3] << " " << m[3][3] << std::endl;
 }
 
-//打印4维向量
 void utilityCore::printVec4(const glm::vec4 &m) {
     std::cout << m[0] << " " << m[1] << " " << m[2] << " " << m[3] << std::endl;
 }
-
-//打印3维向量
 void utilityCore::printVec3(const glm::vec3 &m) {
     std::cout << m[0] << " " << m[1] << " " << m[2] << std::endl;
 }

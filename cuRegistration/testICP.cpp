@@ -26,7 +26,7 @@ void cuICPSample(const std::string& cloudfixed_filename, const std::string& clou
 	GLMPointCloud* pointcloud;
 	GLMPointCloud* pointcloud2;
 	int N, N2;
-#define FREQ 1 // sample 1 pt from every FREQ pts in original
+#define FREQ 1 
 #define SEP ' '
 	if (ext.compare("txt") == 0) {
 		pointcloud = new GLMPointCloud(cloudfixed_filename, FREQ, SEP);
@@ -58,18 +58,18 @@ void cuICPSample(const std::string& cloudfixed_filename, const std::string& clou
 	}
 	std::vector<glm::vec3> cloudFixed = pointcloud->getPoints();
 	std::vector<glm::vec3> cloudMove = pointcloud2->getPoints();
-	//计时开始（自己写的）
+	//计时开始
 	cudaEvent_t     start, stop;
 	cudaEventCreate(&start);
 	cudaEventCreate(&stop);
 	cudaEventRecord(start, 0);
 	cuICP(cloudFixed, cloudMove, cloudOut, MaxneighborDis, convergencePrecision, maxTimes, AverageDis, times, transfromationMat);
-	//计时结束（自己写的）
+	//计时结束
 	cudaEventRecord(stop, 0);
 	cudaEventSynchronize(stop);
 	float   elapsedTime;//ms
 	cudaEventElapsedTime(&elapsedTime, start, stop);
-	//输出到窗口是要花时间的
+
 	std::cout << "两个点云配准时间为：" << elapsedTime << "ms" << std::endl;
 	std::cout << "迭代次数为：" << times << "次" << std::endl;
 	std::cout << "对应点平均点距为：" << AverageDis << "mm" << std::endl;
