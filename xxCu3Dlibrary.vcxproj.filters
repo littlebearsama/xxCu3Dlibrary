@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="cu3DBase\cuPointCloudBase.cu">
+      <Filter>cu3DBase</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuFilter\cuFilters.cu">
+      <Filter>cuFilter</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuRegistration\cuICP.cu">
+      <Filter>cuRegistration</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuRegistration\cuRegistrationBase.cu">
+      <Filter>cuRegistration</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuVisual\cuGLFWbaseFunction.cu">
+      <Filter>cuVisual</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cu3DBase">
+      <UniqueIdentifier>{9ce32b41-c5f1-40e3-9f3f-8c4bcd25dcbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuFilter">
+      <UniqueIdentifier>{1e53f471-60b2-4461-9235-357f1cc27def}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuRegistration">
+      <UniqueIdentifier>{714d818f-4d12-4b35-8a76-5db26bdfea46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuStereo">
+      <UniqueIdentifier>{351b41e9-fc8e-488c-a3a4-50254248a05e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuVisual">
+      <UniqueIdentifier>{1713bbd8-f369-476c-9be7-8e3422c5e3d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cu3DBase\checkCUDAError.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\cuPointCloudBase.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\glmpointcloud.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\glslUtility.hpp">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\kdtree.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\stb_image.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\svd3.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\svd3_cuda.h">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cu3DBase\utilityCore.hpp">
+      <Filter>cu3DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cuFilter\cuFilters.h">
+      <Filter>cuFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="cuFilter\testFilters.h">
+      <Filter>cuFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="cuRegistration\cuICP.h">
+      <Filter>cuRegistration</Filter>
+    </ClInclude>
+    <ClInclude Include="cuRegistration\cuRegistrationBase.h">
+      <Filter>cuRegistration</Filter>
+    </ClInclude>
+    <ClInclude Include="cuRegistration\testICP.h">
+      <Filter>cuRegistration</Filter>
+    </ClInclude>
+    <ClInclude Include="cuVisual\cuGLFWbaseFunction.h">
+      <Filter>cuVisual</Filter>
+    </ClInclude>
+    <ClInclude Include="cuVisual\GLvisualization.h">
+      <Filter>cuVisual</Filter>
+    </ClInclude>
+    <ClInclude Include="cuVisual\VisualBase.h">
+      <Filter>cuVisual</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cu3DBase\glmpointcloud.cpp">
+      <Filter>cu3DBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cu3DBase\glslUtility.cpp">
+      <Filter>cu3DBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cu3DBase\kdtree.cpp">
+      <Filter>cu3DBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cu3DBase\utilityCore.cpp">
+      <Filter>cu3DBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cuFilter\testFilters.cpp">
+      <Filter>cuFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="cuRegistration\testICP.cpp">
+      <Filter>cuRegistration</Filter>
+    </ClCompile>
+    <ClCompile Include="cuVisual\GLvisualization.cpp">
+      <Filter>cuVisual</Filter>
+    </ClCompile>
+    <ClCompile Include="cuVisual\VisualBase.cpp">
+      <Filter>cuVisual</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+</Project>
